@@ -1,7 +1,6 @@
 -----------------------------------------------------------------------------------------
---
--- main.lua
---
+-- Created by: Mouaffak Koubeisy
+-- Created on: Wednesday April 11th 2018
 -----------------------------------------------------------------------------------------
 local ninja = display.newImageRect("./assets/sprites/Ninja Boi.png", 700, 900)
 ninja.x = 600
@@ -32,9 +31,13 @@ lightning.x = 1700
 lightning.y = display.contentHeight - 1100
 lightning.ID = "lightning"
 
+local lightningSound
+
 local function lightningTouch( event )
-
-
+    
+    local lightningSound = audio.loadSound( "./assets/sound/Lightning.wav" )
+    audio.play( lightningSound) 
+    print (" Working ")
     return true
 end
 
